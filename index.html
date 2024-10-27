@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head><script>window.livecodes = window.livecodes || {};</script><title>Untitled Project</title><meta name="title" content="Untitled Project"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./style.css"></head><body>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navy DataPad Terminal</title>
+    <link rel="stylesheet" href="styles.css">
+        <script>
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.add('hidden');
+    });
+    document.getElementById(sectionId).classList.remove('hidden');
+}
+</script>
+
+
+
+    <div class="container">
+        <div class="datapad">
+            <div class="screen">
+                <div class="header">
+                    <h1>NAVY DATAPAD TERMINAL</h1>
+                    <div class="status">STATUS: ONLINE</div>
+                </div>
+                <nav class="menu">
+                    <button onclick="showSection('logEntry')">Log Entry</button>
+                    <button onclick="showSection('personnel')">Personnel Database</button>
+                    <button onclick="showSection('missions')">Mission Reports</button>
+                    <button onclick="showSection('comms')">Communications</button>
+                    <button onclick="showSection('shipScan')">Ship Scanner</button>
+                </nav>
+                
+                <div id="logEntry" class="section">
+                    <h2>New Log Entry</h2>
+                    <form id="logForm">
+                        <input type="text" placeholder="Name" id="name" required="">
+                        <input type="text" placeholder="Rank" id="rank" required="">
+                        <input type="date" id="date" required="">
+                        <textarea placeholder="Your log entry..." id="log" required=""></textarea>
+                        <button type="submit">Submit Log</button>
+                    </form>
+                </div>
+
+<!-- Add this new section to your existing sections in index.html -->
+
+<!-- Add this new section to your existing sections in index.html -->
+<div id="shipScan" class="section hidden">
+    <h2>Ship Diagnostic Scanner</h2>
+    <form id="scanForm" class="scan-form">
+        <input type="text" id="scannerName" placeholder="Scanner Officer Name" required="">
+        <input type="text" id="shipName" placeholder="Ship Name" required="">
+        <div class="scan-grid">
+            <div class="scan-category">
+                <h3>Hull Integrity</h3>
+                <input type="range" id="hullIntegrity" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Hull Notes..." id="hullNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Shield Systems</h3>
+                <input type="range" id="shieldStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Shield Notes..." id="shieldNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Weapons Systems</h3>
+                <input type="range" id="weaponsStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Weapons Notes..." id="weaponsNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Reactor Core</h3>
+                <input type="range" id="reactorStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Reactor Notes..." id="reactorNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Engineering Systems</h3>
+                <input type="range" id="engineStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Engineering Notes..." id="engineNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Power Distribution</h3>
+                <input type="range" id="powerStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Power Notes..." id="powerNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Life Support</h3>
+                <input type="range" id="lifeSupportStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Life Support Notes..." id="lifeSupportNotes"></textarea>
+            </div>
+            <div class="scan-category">
+                <h3>Navigation Systems</h3>
+                <input type="range" id="navStatus" min="0" max="100" value="100">
+                <span class="scan-value">100%</span>
+                <textarea placeholder="Navigation Notes..." id="navNotes"></textarea>
+            </div>
+        </div>
+        <button type="submit">Submit Scan Report</button>
+    </form>
+</div>
+
+              <div id="personnel" class="section hidden">
+    <h2>Personnel Database</h2>
+    <div class="personnel-list">
+                        <input type="text" placeholder="Search personnel...">
+                        <button>Search</button>
+                    </div>
+                    <div class="personnel-list">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+
+                <div id="missions" class="section hidden">
+                    <h2>Active Missions</h2>
+                    <div class="mission-list">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+
+                <div id="comms" class="section hidden">
+                    <h2>Communications Center</h2>
+                    <div class="chat-window">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+
+
+<script src="./script.js" type="module"></script></body></html>
